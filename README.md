@@ -1,14 +1,13 @@
 # Software Engineering [CSE334s] - Project 
 
 ## Team Members: 
-• Hossam Tarek Elsayed   2000078  
-• Amged Shrief Abdelrahman  2000121  
-• Noha Adel Desouky Khodier  2001407 
-
-• Nourhan Ahmed Abd El-Rahman 2001453 
-• Hazem Zainhom Abdel-alim   2000168 
+• Hossam Tarek Elsayed   2000078    
+• Amged Shrief Abdelrahman  2000121    
+• Noha Adel Desouky Khodier  2001407   
+• Nourhan Ahmed Abd El-Rahman 2001453   
+• Hazem Zainhom Abdel-alim   2000168   
 • Farah Abdelrahman Mohamed  2000901   
-• Rana Amr Abd El Naby   2000256
+• Rana Amr Abd El Naby   2000256  
 
 ## Objective:
 The student will practice how to
