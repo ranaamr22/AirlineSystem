@@ -1,5 +1,6 @@
-#Software Engineering [CSE334s] - Project 
-#Team Members: 
+# Software Engineering [CSE334s] - Project 
+
+## Team Members: 
 • Hossam Tarek Elsayed   2000078  
 • Amged Shrief Abdelrahman  2000121  
 • Noha Adel Desouky Khodier  2001407 
@@ -8,11 +9,13 @@
 • Farah Abdelrahman Mohamed  2000901   
 • Rana Amr Abd El Naby   2000256
 
-1. Objective:
+## Objective:
 The student will practice how to
 - Design a class diagram for a given system
 - Implement the class diagram code to provide specific functionalities
-2. Task:
+
+  
+## Task:
 Draw a class model of airlines system, given data is:
 Each airline is based in one country.
 Each airline has several fleets of aircraft, each of one type of aircraft.
