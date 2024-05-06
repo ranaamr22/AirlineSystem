@@ -78,26 +78,92 @@ public class AirportSystem {
 		systemLandingArrangements.add(LA5);
 		systemLandingArrangements.add(LA6);
 
-		// Assigning landing arrangements to airports 
-	//to be implemented
+                // Assigning landing arrangements to airports 
+		ArrayList<LandingArrangement> LA_Airport1 = new ArrayList<LandingArrangement>();
+		LA_Airport1.add(LA1);
+		LA_Airport1.add(LA3);
+		Airport airport1 = new Airport("Lyon Airport" , "Lyon" , LA_Airport1);
+
+		ArrayList<LandingArrangement> LA_Airport2 = new ArrayList<LandingArrangement>();
+		LA_Airport2.add(LA4);
+		LA_Airport2.add(LA6);
+		Airport airport2 = new Airport("Charles de Gaulle Airport" , "Paris",LA_Airport2);
+
+		ArrayList<LandingArrangement> LA_Airport3 = new ArrayList<LandingArrangement>();
+		LA_Airport3.add(LA5);
+		LA_Airport3.add(LA2);
+		Airport airport3 = new Airport("Cairo International Airport" , "Cairo", LA_Airport3);
 
 
 		//now we can put all airports in the system in a List 
-		//to be implemented
+		ArrayList<Airport> systemAirports = new ArrayList<Airport>();
+		systemAirports.add(airport1);
+		systemAirports.add(airport2);
+		systemAirports.add(airport3);
 
 		// Creating Countries and adding airports in them  
-		//to be implemented
+		Country country1 = new Country("France");
+		country1.addAirport(airport1);
+		country1.addAirport(airport2);
+
+		Country country2 = new Country("Egypt");
+		country2.addAirport(airport3);
 
 		// a list of all countries in the system
-		//to be implemented
+		ArrayList<Country> systemCountries = new ArrayList<Country>();
+		systemCountries.add(country1);
+		systemCountries.add(country2);
+
 
 		//Question 1 :  List the aircraft types which may land at a particular airport.
-		//to be implemmented 
+		Scanner scanner = new Scanner(System.in);
+		int flag =0;
+		do {
+			System.out.println(" ---- Please Choose an Airport ----");
+			System.out.println("# Exisiting Airports in the system are: ");
+			for(Airport e: systemAirports) {
+				System.out.println("-"+e.getName());
+			}
+			String chosenAirport = scanner.nextLine();
+			for(Airport a : systemAirports) {
+				if(chosenAirport.equals(a.getName())) {
+					a.printAircraftTypes();
+					flag=1;
+				}
+			}
+			if(flag ==0) {
+				System.out.println("--- Chosen Airport doesn't exist please try again! ---");
+			}
+		}while(flag==0);
+		flag=0;
 
 		///////////////////////////////////////////////////////////////////////////////////
 		//Question 2: Find all airports at which a Boeing 757 could land
-    //to be implemenetd 
-	
+		do{
+			System.out.println("----------------------------------------------------------------------------------");
+			System.out.println("---- Please Choose an Aircraft Type ----");
+			System.out.println("# Existing aircraft types in the system are:");
+
+			for(Aircraft a: systemAircrafts) {
+				System.out.println("-"+a.getType());
+			}
+			String chosenAircraft = scanner.nextLine();
+			ArrayList<String> Types = new ArrayList<String>();
+			for(Airport a : systemAirports) {
+				Types = a.getAircraftTypes();
+				for(String s : Types) {
+					if(chosenAircraft.equals(s)) {
+						System.out.println( "--->"+"Airport Name: " + a.getName());
+						flag=1;
+
+					}
+				}
+			}
+			if(flag ==0) {
+				System.out.println("--- Chosen Aircrtaft doesn't exist please try again! ---");
+			}
+		}while(flag==0);
+		flag=0;
 		////////////////////////////////////////////////////////////////////////////////
 		//Question 3 :  List all airports in France.
 		do {
